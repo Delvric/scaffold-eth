@@ -6,7 +6,7 @@ import { Row, Col } from "antd";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { useUserAddress, useBalance } from "eth-hooks";
-import { useExchangePrice, useGasPrice, useUserProvider } from "./hooks";
+import { useExchangePrice, useUserProvider } from "./hooks";
 import { Header, Account, Faucet, Ramp, Contract } from "./components";
 import Hints from "./Hints";
 import { INFURA_ID } from "./constants";
@@ -91,7 +91,7 @@ function App() {
           and give you a form to interact with it locally
       */}
 
-      <Contract name="YourContract" provider={userProvider} address={address} />
+      <Contract name="YourToken" provider={userProvider} address={address} />
 
       <Hints address={address} yourLocalBalance={yourLocalBalance} price={price} mainnetProvider={mainnetProvider} />
 

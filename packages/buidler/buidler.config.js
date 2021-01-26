@@ -167,7 +167,7 @@ try {
 }
 
 module.exports = {
-  defaultNetwork: "xdai",
+  defaultNetwork: "localhost",
   networks: {
     localhost: {
       url: "http://localhost:8545",
